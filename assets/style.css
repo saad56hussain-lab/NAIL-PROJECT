@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.navbar {
+    color: lightpink;
+    border-bottom: 4px solid pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: lightpink;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: lightpink;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-links a:hover {
+    background-color: lightpink;
+    color: black;
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: black;
+    top: 40px;
+    min-width: 180px;
+    border-radius: 5px;
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.banner {
+    width: 100%;
+    height: 1000px;
+    background: #000000;
+    background-image: url(images/nailartbanner.png);
+    border-bottom: 4px solid lightpink;
+}
+.heading h2{
+    text-align: center;
+    color: lightpink;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.heading p{
+    text-align: center;
+    color: lightpink;
+    font-size: 15px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.parentofcard {
+    display: flex;
+    gap: 40px;
+    padding: 20px 40px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 320px;
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 2px 8px pink;
+    border: 2px solid pink;
+    background: #000000;
+}
+
+.card:hover {
+    box-shadow: 0 4px 20px pink;
+    border-color: pink;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    padding: 20px;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: lightpink;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.overlay ul {
+    list-style: square ;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.overlay ul li {
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: 6px;
+    
+    position: relative;
+    color: #ffffff;
+}
+
+.overlay ul li::before {
+    color: lightpink;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aboutcellinfo {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 100px;
+    background: #0a0000;
+    gap: 60px;
+}
+
+.abouttext {
+    width: 55%;
+    color: #ffffff;
+}
+
+.abouttext h2 {
+    color: lightpink;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.abouttext p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+.aboutimage {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutimage img {
+    width: 500px;
+    height: 450px;
+    border-radius: 8px;
+    border: 2px solid lightpink;
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+.footer {
+    width: 100%;
+    min-height: 350px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    padding: 50px 100px 30px;
+    border-top: 4px solid pink;
+}
+
+.footer div {
+    width: 280px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: lightpink;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 0;
+    display: block;
+}
+
+.footer div i {
+    color: lightpink;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.contactheading {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.contactheading h2 {
+    color: lightpink;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.contactheading p {
+    color: #cccccc;
+    font-size: 16px;
+}
+
+.contactcontainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contactinfo {
+    width: 45%;
+}
+
+.infobox {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: black;
+    border-radius: 8px;
+    border: 2px solid pink;
+}
+
+.infobox i {
+    font-size: 28px;
+    color: lightpink;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.infobox h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.infobox p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contactform {
+    width: 50%;
+    background: black;
+    padding: 40px;
+    border-radius: 8px;
+    border: 2px solid pink;
+}
+
+.contactform h2 {
+    color: lightpink;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.contactform form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactform input,
+.contactform textarea {
+    padding: 12px;
+    border: 2px solid lightpink;
+    background: black;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.contactform input:focus,
+.contactform textarea:focus {
+    border-color: black;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+.contactform input::placeholder,
+.contactform textarea::placeholder {
+    color: pink;
+}
+
+.contactform button {
+    padding: 12px;
+    background: lightpink;
+    color: black;
+    border: 2px solid lightpink;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
